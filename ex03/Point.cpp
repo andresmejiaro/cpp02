@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/22 16:04:22 by amejia            #+#    #+#             */
-/*   Updated: 2023/06/22 16:04:30 by amejia           ###   ########.fr       */
+/*   Created: 2023/06/22 18:11:24 by amejia            #+#    #+#             */
+/*   Updated: 2023/06/22 18:23:52 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#include "Point.hpp"
 
-# include <iostream>
+Point::Point() : x(0), y(0){	
+}
 
-class Fixed{
-private:
-	static int const	f_bits = 8;
-	int					value;
-public:
-	Fixed();
-	~Fixed();
-	Fixed(const Fixed &other);
-	Fixed &operator= (const Fixed &other);
-	int getRawBits(void) const;
-	void setRawBits( int const raw);
-};
-#endif
+Point::~Point(){
+}
+
+Point::Point(float x, float y): x(x),y(y){
+}
+
+Point::Point(const Point &other): x(other.getX()), y(other.getY()){	
+}
+
+Fixed Point::getX(){
+	return (this->x);
+}
+
+Fixed Point::getY(){
+	return (this->y);
+}
+
+Fixed &Point::rotate90(void) const{
+	
+}

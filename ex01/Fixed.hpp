@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/22 16:04:22 by amejia            #+#    #+#             */
-/*   Updated: 2023/06/22 16:04:30 by amejia           ###   ########.fr       */
+/*   Created: 2023/06/22 16:05:40 by amejia            #+#    #+#             */
+/*   Updated: 2023/06/22 16:05:49 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FIXED_HPP
 
 # include <iostream>
+# include <cmath>
 
 class Fixed{
 private:
@@ -23,8 +24,14 @@ public:
 	Fixed();
 	~Fixed();
 	Fixed(const Fixed &other);
+	Fixed(const int numb);
+	Fixed(const float numb);
+	float toFloat(void) const;
+	int toInt(void) const;
 	Fixed &operator= (const Fixed &other);
 	int getRawBits(void) const;
 	void setRawBits( int const raw);
 };
+
+std::ostream& operator<<(std::ostream &os, const Fixed &obj);
 #endif

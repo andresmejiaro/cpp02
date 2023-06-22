@@ -6,7 +6,7 @@
 #    By: amejia <amejia@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/28 17:23:35 by amejia            #+#    #+#              #
-#    Updated: 2023/06/22 16:06:51 by amejia           ###   ########.fr        #
+#    Updated: 2023/06/18 13:42:55 by amejia           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS = main.cpp Fixed.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = #-Wall -Wextra -Werror -std=c++98
 
 CC = c++
 
